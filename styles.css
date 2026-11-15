@@ -572,6 +572,30 @@ a {
   overflow: visible;
 }
 
+.studio-wave {
+  transform-box: fill-box;
+  transform-origin: right center;
+  animation: studio-wave-pulse 3s ease-in-out infinite;
+}
+
+.wave-two {
+  animation-delay: -1s;
+}
+
+.wave-three {
+  animation-delay: -2s;
+}
+
+.host-mouth {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: host-speaking 2.8s ease-in-out infinite;
+}
+
+.studio-mic-grille {
+  animation: mic-listening 2.8s ease-in-out infinite;
+}
+
 .about-visual-caption {
   position: absolute;
   z-index: 2;
@@ -1137,6 +1161,52 @@ body.menu-open {
 
   to {
     transform: scaleY(6.2);
+  }
+}
+
+@keyframes studio-wave-pulse {
+  0%,
+  100% {
+    opacity: .3;
+    transform: scale(.96);
+  }
+
+  50% {
+    opacity: .82;
+    transform: scale(1.045);
+  }
+}
+
+@keyframes host-speaking {
+  0%,
+  12%,
+  23%,
+  37%,
+  49%,
+  100% {
+    transform: scaleY(.72);
+  }
+
+  17%,
+  21% {
+    transform: scaleY(2.05);
+  }
+
+  41%,
+  45% {
+    transform: scaleY(1.55);
+  }
+}
+
+@keyframes mic-listening {
+  0%,
+  100% {
+    opacity: .55;
+  }
+
+  20%,
+  45% {
+    opacity: .9;
   }
 }
 
