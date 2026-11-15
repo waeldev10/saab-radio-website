@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Thmanyah Sans";
+  src: url("assets/fonts/thmanyahsans-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("assets/fonts/noto-sans-arabic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --sand: #F5F2E8;
   --paper: #FFFCF5;
@@ -22,7 +38,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--sand);
-  font-family: "Thmanyah Sans", "Thmanyah", Tahoma, sans-serif;
+  font-family: "Thmanyah Sans", "Noto Sans Arabic", "Thmanyah", Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -542,10 +558,11 @@ a {
 }
 
 .about-visual-mark {
-  width: min(100%, 430px);
+  width: min(100%, 460px);
   color: var(--wine);
   position: relative;
   z-index: 1;
+  filter: drop-shadow(0 12px 18px rgba(24, 72, 88, .1));
 }
 
 .about-visual-mark svg {
@@ -1016,6 +1033,7 @@ a {
   font-size: clamp(14px, 3vw, 24px);
   letter-spacing: -.04em;
   transition: color .2s, padding .2s;
+   font-weight: bold;
 }
 
 .menu-list a:hover {
@@ -1027,6 +1045,7 @@ a {
   color: #84989A;
   font-size: 8px;
   letter-spacing: .13em;
+  font-weight: bold;
 }
 
 .menu-panel-bottom {

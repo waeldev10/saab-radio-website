@@ -11,7 +11,7 @@ window.tailwind.config = {
         clay: '#D8A858',
         muted: '#65777A'
       },
-      fontFamily: { arabic: ['Thmanyah Sans', 'Thmanyah', 'Tahoma', 'sans-serif'] }
+      fontFamily: { arabic: ['Thmanyah Sans', 'Noto Sans Arabic', 'Thmanyah', 'Tahoma', 'sans-serif'] }
     }
   }
 };
