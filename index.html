@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F5F2E8" />
+  <meta name="description" content="إذاعة مأرب — صوتٌ محلي يروي الحكاية من قلب المدينة." />
+  <title>إذاعة جامعة اقليم سباء — صوت المدينة</title>
+
+  <script src="tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-arabic">
+
+  <header class="site-header" id="home">
+    
+    <div class="header-topline" aria-hidden="true"></div>
+    
+    <div class="header-inner">
+
+      <div class="header-main flex items-center justify-between">
+
+        <a class="brand flex items-center" href="#home" aria-label="إذاعة جامعة سبأ الإقليمية — الرئيسية">
+
+          <span class="brand-logo-frame">
+
+            <img  class="brand-logo" 
+                  src="assets/ethaah-logo.png" 
+                  alt="شعار إذاعة جامعة سبأ الإقليمية" 
+                  width="321" height="204"
+                  loading="lazy"
+                  fetchpriority="high" />
+
+          </span>
+
+        </a>
+
+        <nav class="nav-links" aria-label="التنقل الرئيسي">
+
+          <a href="#home">الرئيسية</a>
+          <a href="#about">من نحن</a>
+          <a href="#programs">الأخبار</a>
+          <a href="#programs">البرامج</a>
+          <a href="#programs">البودكاست</a>
+          <a href="#programs">الفيديو</a>
+          <a href="#footer">فريق الإذاعة</a>
+
+        </nav>
+
+        <div class="header-actions flex items-center">
+
+          <a class="live-button" href="#live-player">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>استمعوا للبث</span>
+            <svg class="transform -rotate-180" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M6 3.5 11 8l-5 4.5v-9Z" fill="currentColor"/>
+            </svg>
+          </a>
+
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح قائمة التنقل" aria-expanded="false" aria-controls="mobileMenu">
+            <svg id="menuIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+
+      <nav class="menu-panel" id="mobileMenu" data-open="false" aria-label="التنقل على الهاتف" aria-hidden="true" inert>
+
+        <div class="menu-panel-inner">
+
+          <div class="menu-panel-header">
+
+            <a class="brand flex items-center" href="#home" aria-label="إذاعة جامعة سبأ الإقليمية — الرئيسية">
+              <span class="brand-logo-frame">
+                <img class="brand-logo" src="assets/ethaah-logo.png" alt="شعار إذاعة جامعة سبأ الإقليمية" width="321" height="204" />
+              </span>
+            </a>
+
+            <button class="menu-close" id="menuClose" type="button" aria-label="إغلاق قائمة التنقل">
+              <svg width="19" height="19" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+
+          </div>
+
+          <!-- <div class="menu-intro"><span>اختروا وجهتكم</span><span>مأرب · إذاعة</span></div> -->
+
+          <div class="menu-list">
+            <a href="#home"><span>الرئيسية</span><small>01</small></a>
+            <a href="#about"><span>من نحن</span><small>02</small></a>
+            <a href="#programs" ><span>الأخبار</span><small>03</small></a>
+            <a href="#programs"><span>البرامج</span><small>04</small></a>
+            <a href="#programs"><span>البودكاست</span><small>05</small></a>
+            <a href="#programs"><span>الفيديو</span><small>06</small></a>
+            <a href="#footer"><span>فريق الإذاعة</span><small>07</small></a>
+          </div>
+
+          <div class="menu-panel-bottom">
+            <a class="mobile-live" href="#live-player">
+              <span class="live-dot" aria-hidden="true"></span> 
+               استمعوا للبث 
+              <svg class="transform -rotate-180" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M6 3.5 11 8l-5 4.5v-9Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <p class="menu-footer-note">من مأرب، نروي الحكاية بصوت قريب من الناس</p>
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero-inner">
+
+        <div class="hero-grid">
+
+          <div class="hero-copy">
+            
+            <div class="eyebrow"><span>من قلب مأرب</span></div>
+
+            <h1 class="hero-title" id="hero-title">حين تتكلم الجامعة<span>نصغي أبعد</span></h1>
+
+            <p class="hero-description">أخبار تلامس يومكم، وبرامج تبقي الحكاية قريبة. صوت محلي يفتح نافذة أوسع على الناس والمكان</p>
+
+            <div class="hero-ctas">
+              <a class="primary-cta" href="#live-player">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3.5 11 8l-5 4.5v-9Z" fill="currentColor"/></svg>
+                استمعوا إلى البث
+              </a>
+              <a class="secondary-cta" href="#about"> تعرفوا عن فريق الاذاعة <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H4m0 0 4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            </div>
+
+          </div>
+
+          <div class="meta-right" aria-label="إذاعة مأرب، صوتٌ أقرب للحكاية">
+            <div class="signal-line" aria-hidden="true">
+              <i style="--h:7px"></i>
+              <i style="--h:11px"></i>
+              <i style="--h:17px"></i>
+              <i style="--h:10px"></i>
+              <i style="--h:21px"></i>
+              <i style="--h:14px"></i>
+              <i style="--h:8px"></i>
+              <i style="--h:18px"></i>
+              <i style="--h:12px"></i>
+              <i style="--h:6px"></i>
+              <i style="--h:15px"></i>
+              <i style="--h:9px"></i>
+            </div>
+            <div class="meta-copy"><strong>إذاعة مأرب</strong><span>صوتٌ أقرب للحكاية</span></div>
+          </div>
+          
+        </div>
+
+        <!-- <div class="hero-divider" aria-hidden="true"></div>
+
+        <div class="hero-meta" id="live-player">
+          <div class="on-air-line"><span class="live-dot" aria-hidden="true"></span><span>البث المباشر</span><span class="meta-label">من مأرب إلى كل بيت</span></div>
+          <span class="meta-note">نستمع إلى المكان، وننقل صوته.</span>
+        </div> -->
+
+      </div>
+
+      <div class="hero-edge" aria-hidden="true">
+
+        <svg viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="edge-fill" fill="currentColor" d="M0 40c122-16 215-6 331 4 149 13 251-19 394-18 140 1 232 28 363 17 127-10 224-34 352-19v40H0V40Z"/>
+          <path class="edge-line" d="M0 37c122-14 215-5 331 3 149 10 251-16 394-15 140 1 232 22 363 13 127-8 224-26 352-14"/>
+          <path class="edge-line" d="M0 43c126-12 215-2 331 5 149 9 251-13 394-12 140 1 232 18 363 11 127-7 224-22 352-12"/>
+        </svg>
+        
+      </div>
+      
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+
+      <div class="about-inner">
+
+        <div class="about-layout">
+
+          <div class="about-copy-column">
+
+            <div class="about-kicker">من نحن</div>
+
+            <h2 class="about-title" id="about-title">إذاعة الجامعة   <span>وبصوت أهلها</span></h2>
+            <p class="about-lead">إذاعة الجامعة المحلية نافذة إعلامية من المحافظة وإليها</p>
+            <p class="about-copy">ننقل الخبر المحلي، ونفتح مساحة للنقاش، ونروي حكايات المكان عبر برامج اجتماعية وثقافية وتنموية تلامس حياة الناس</p>
+            
+            <a class="about-link" href="#programs">اعرفوا اكثر عن الإذاعة 
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H4m0 0 4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+          </div>
+
+          <div class="about-visual" role="img" aria-label="رسم لمذيع يرتدي سماعة أمام ميكروفون داخل استوديو إذاعي">
+            <div class="about-visual-mark" aria-hidden="true">
+              <svg viewBox="0 0 460 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="host-shirt" x1="267" y1="237" x2="355" y2="352" gradientUnits="userSpaceOnUse"><stop stop-color="#285868"/><stop offset="1" stop-color="#184858"/></linearGradient>
+                </defs>
+                <path d="M43 318h371" stroke="#184858" stroke-opacity=".18"/>
+                <path d="M218 285c-26 15-42 22-66 24m98-24c27 13 48 18 79 19" stroke="#285868" stroke-opacity=".35" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M206 335c7-41 17-68 42-84 17-11 38-16 61-16 25 0 47 6 63 18 21 15 31 43 36 82H206Z" fill="url(#host-shirt)" stroke="#184858" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="m267 239 19 19 23-20 15 9-15 35h-45l-15-34 18-9Z" fill="#F5F2E8" stroke="#184858" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M267 211v31l19 18 23-21v-32" fill="#D8A858" stroke="#184858" stroke-width="1.3" stroke-linejoin="round"/>
+                <path d="M253 92c18-24 53-31 78-14 23 16 31 43 27 72l-5 34c-4 23-18 40-39 49-20 8-44 5-61-8-13-10-19-22-21-36l-13-8c-7-4-5-9 1-13l10-8c-3-26 2-51 23-68Z" fill="#F5F2E8" stroke="#184858" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M231 143c-3-42 17-75 52-84 39-10 72 11 82 49-17-7-25-21-31-31-14 21-40 24-62 28-15 3-28 16-41 38Z" fill="#184858"/>
+                <path d="M229 150c-3-53 22-91 66-95 48-4 76 34 69 91" stroke="#285868" stroke-width="9" stroke-linecap="round"/>
+                <path d="M229 133c-8 2-13 8-13 17v27c0 10 6 16 15 16h8v-60h-10Zm137 0c8 2 13 8 13 17v27c0 10-6 16-15 16h-8v-60h10Z" fill="#184858" stroke="#184858" stroke-width="1.5"/>
+                <path d="M224 151c2-7 7-11 14-12m125 12c-2-7-7-11-14-12" stroke="#E8B868" stroke-width="2" stroke-linecap="round"/>
+                <path d="M229 160c5-3 10-3 15 0m15 13c5 3 10 3 15 0m-23-17 1 1" stroke="#184858" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M252 188c8 5 16 5 23 1" stroke="#285868" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="m248 217 22 10-12 13-19-12 9-11Zm68 2-21 9 13 13 18-12-10-10Z" fill="#D8A858" stroke="#184858" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M114 292V180l46-30m-46 142h48" stroke="#184858" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M157 143c12 4 20 13 21 24l-4 14c-2 7-9 10-16 8l-11-3c-7-2-10-9-8-16l4-16c2-8 7-13 14-11Z" fill="#D8A858" stroke="#184858" stroke-width="1.7"/>
+                <path d="m151 151 16 4m-18 3 17 4m-19 4 17 4m-18 4 15 4" stroke="#F5F2E8" stroke-opacity=".8" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M116 180h18m-20 112-19 26m19-26 19 26" stroke="#184858" stroke-width="2" stroke-linecap="round"/>
+                <path d="M177 174c9-2 18-1 27 2m-24 9c8-2 14-2 21 0" stroke="#285868" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round"/>
+                <circle cx="334" cy="116" r="3" fill="#D8A858"/>
+                <path d="M349 294h6m-18 12h6m-26 12h6" stroke="#D8A858" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="about-visual-caption">من استوديو الإذاعة</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="programs" id="programs" aria-labelledby="programs-title">
+
+      <div class="programs-inner">
+
+        <div class="programs-heading">
+
+          <div class="programs-heading-copy">
+            <div class="programs-kicker">على أثير إذاعة مأرب</div>
+            <h2 class="programs-title" id="programs-title">برامج الإذاعة</h2>
+            <p class="programs-intro">حوارات وقصصٌ من حياة المجتمع. اختاروا برنامجا للاستماع إلى محتواه</p>
+          </div>
+
+          <a class="programs-all" href="https://t.me/marebradio" target="_blank" rel="noopener noreferrer">
+            عرض كل البرامج 
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M5 11 11 5M6 5h5v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+        </div>
+
+        <div class="programs-grid">
+
+          <a class="program-card program-card-featured" href="#" >
+
+            <div class="program-topline">
+
+              <span class="program-index">01 / حوار</span>
+              <span class="program-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2.8 4h10.4M2.8 7.1h7.4M2.8 10.2h5.1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                  <path d="m10 10 1.6 1.6L14 9.2" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+
+            <h3>فوق الطاولة</h3>
+            <p>لقاءات حوارية تضع القضايا العامة والتعليم والمجتمع على الطاولة</p>
+
+            <span class="program-open">استمعوا إلى البرنامج 
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H4m0 0 4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+          </a>
+
+          <a class="program-card" href="#" >
+
+            <div class="program-topline">
+              <span class="program-index">02 / مجتمع</span>
+              <span class="program-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="6" cy="5.2" r="2" stroke="currentColor" stroke-width="1.1"/>
+                  <circle cx="11.3" cy="6.1" r="1.5" stroke="currentColor" stroke-width="1.1"/>
+                  <path d="M2.5 12.7c.3-2.1 1.5-3.2 3.5-3.2s3.3 1.1 3.6 3.2m.1-2.6c1.9-.3 3.2.6 3.7 2.6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+
+            <h3>من الواقع</h3>
+            <p>قصص اجتماعية تسلط الضوء على تجارب الناس وقضاياهم اليومية</p>
+
+            <span class="program-open">استمعوا إلى البرنامج 
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H4m0 0 4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+          </a>
+
+          <a class="program-card" href="#">
+
+            <div class="program-topline">
+              <span class="program-index">03 / تفاعلي</span>
+              <span class="program-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 3.8h10v7H8.5L5 13v-2.2H3v-7Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+                  <path d="M5.3 7.3h5.4M5.3 8.9h3.8" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+
+            <h3>أثير الجامعة</h3>
+            <p>حوار يطرح موضوعًا للنقاش ويفتح المجال لمشاركة المستمعين</p>
+
+            <span class="program-open">استمعوا إلى البرنامج 
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M13 8H4m0 0 4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="footer-edge" aria-hidden="true">
+    <svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="footer-wave-gradient" x1="0" y1="0" x2="1440" y2="52" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#285868"/><stop offset=".2" stop-color="#184858"/><stop offset=".68" stop-color="#123B46"/><stop offset="1" stop-color="#1D4652"/>
+        </linearGradient>
+      </defs>
+      <path class="edge-fill" fill="url(#footer-wave-gradient)" d="M0 33c138-14 236 8 365 8 130 0 246-26 377-23 123 3 198 23 321 21 143-3 233-29 377-17v30H0V33Z"/>
+      <path class="edge-wave" d="M0 31c138-12 236 7 365 7 130 0 246-22 377-20 123 3 198 19 321 17 143-3 233-25 377-15"/>
+      <path class="edge-wave" d="M0 35c138-10 236 6 365 6 130 0 246-18 377-17 123 2 198 15 321 14 143-3 233-20 377-12"/>
+    </svg>
+  </div>
+
+  <footer class="footer" id="footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <a class="brand flex items-center" href="#home" aria-label="إذاعة جامعة سبأ الإقليمية — الرئيسية">
+            <span class="brand-logo-frame">
+              <img class="brand-logo" src="assets/ethaah-logo.png" alt="شعار إذاعة جامعة سبأ الإقليمية" width="321" height="204" /></span>
+          </a>
+
+          <p>من قلب الجامعة، نروي الحكاية بصوتٍ قريب من الناس، ونافذة تتسع للمكان وأهله</p>
+
+        </div>
+
+        <div>
+          <h2 class="footer-heading">تصفحوا</h2>
+          <nav class="footer-links" aria-label="روابط الأقسام"><a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="https://marebradio.com/" target="_blank" rel="noopener noreferrer">الأخبار</a><a href="#programs">البرامج</a><a href="#programs">البودكاست</a><a href="#programs">الفيديو</a><a href="#footer">فريق الإذاعة</a></nav>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">تواصلوا معنا</h2>
+          <div class="footer-location"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 6.7c0 3.4-5 7.3-5 7.3S3 10.1 3 6.7a5 5 0 1 1 10 0Z" stroke="currentColor" stroke-width="1.1"/><circle cx="8" cy="6.5" r="1.5" stroke="currentColor" stroke-width="1.1"/></svg><span>مأرب، الجمهورية اليمنية</span></div>
+          <p class="footer-heading" style="margin-top:22px;margin-bottom:0">على المنصات</p>
+          <div class="social-row" aria-label="منصات التواصل الاجتماعي">
+            <a class="social-mark" href="#"  title="فيسبوك إذاعة مأرب" aria-label="فيسبوك إذاعة مأرب">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M9.4 14V8.7h1.8l.3-2.1H9.4V5.3c0-.6.2-1 1.1-1h1.1V2.4c-.5-.1-1.1-.1-1.6-.1-1.8 0-3 1.1-3 3.1v1.2H5v2.1h2V14h2.4Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a class="social-mark" href="#" title="يوتيوب إذاعة مأرب" aria-label="يوتيوب إذاعة مأرب">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="1.4" y="3.1" width="13.2" height="9.8" rx="3" stroke="currentColor" stroke-width="1.2"/>
+                <path d="m6.5 5.5 4 2.5-4 2.5v-5Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a class="social-mark" href="#" title="إكس إذاعة مأرب" aria-label="إكس إذاعة مأرب">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 2.5h2.3l7.7 11H10.7L3 2.5Zm.4 11 4.1-4.8m1-1.2 3.1-3.6" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+            </svg>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span id="year">2026</span> إذاعة الجامعة جميع الحقوق محفوظة.</span><span>صوت من الجامعة</span></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
